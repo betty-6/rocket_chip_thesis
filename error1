@@ -1,0 +1,18 @@
+3> read_hdl -sv  /home/tcad/Desktop/srishti/design/ic.v
+`
+|
+Error   : Invalid directive. [VLOGPT-644] [read_hdl]
+        : Directive '' in file '/home/tcad/Desktop/srishti/design/ic.v' on line 3, column 1.
+        : Verify the directive to make sure the syntax is written correctly or supported.
+1
+@genus:root: 4> set_db hdl_search_path {/home/tcad/Desktop/srishti/design} 
+Warning : This attribute will be obsolete in a next major release. [TUI-32]
+        : attribute: 'hdl_search_path', object type: 'root'
+        : Attribute 'hdl_search_path' is going to be obsoleted, use the new attribute 'init_hdl_search_path'.
+  Setting attribute of root '/': 'hdl_search_path' = /home/tcad/Desktop/srishti/design
+1 /home/tcad/Desktop/srishti/design
+@genus:root: 5> read_hdl -sv{ic.v}
+Warning : Cannot open file. [VLOGPT-650]
+        : File '-sv{ic.v}'.
+        : The specified file could not be opened.  Check the value of the init_hdl_search_path attribute.
+@genus:root: 6> read_hdl 
